@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Container/Main Content */
+body>* {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+h4 {
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #764ba2;
+    background-color: #f0f0f0;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #667eea;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Action buttons container */
+li>a,
+li>form {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+li>form {
+    display: inline;
+}
+
+li>form button {
+    background-color: #e74c3c;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+li>form button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    body>* {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    li {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+
+<body>
+    <h1>Blog Posts</h1>
+
+
+
+    <a href="/add">Add New Post</a>
+
+    <ul>
+        <% posts.forEach((post, index)=> { %>
+            <li>
+                <h3>
+                    @<%= post.username %>
+                </h3>
+                <h4>
+                    <%= post.title %>
+                </h4>
+                <p>
+                    <%= post.content %>
+                </p>
+
+                <a href="/edit/<%= index %>">Edit</a>
+
+                <form action="/delete/<%= index %>" method="POST">
+                    <button>Delete</button>
+                </form>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
