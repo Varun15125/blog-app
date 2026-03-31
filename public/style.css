@@ -28,6 +28,11 @@ h1 {
     padding-bottom: 15px;
 }
 
+.postx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 h3 {
     color: #333;
     margin: 10px 0;
@@ -135,6 +140,7 @@ li>a,
 li>form {
     margin-top: 15px;
     display: inline-block;
+    
 }
 
 li>form {
