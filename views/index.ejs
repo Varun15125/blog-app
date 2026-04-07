@@ -11,10 +11,13 @@
 <body>
     <h1>Blog Posts</h1>
 
+<div class="add">
+    <a href="/add">New Post</a>
 
+</div>
 
-    <a href="/add">Add New Post</a>
-
+    
+<div class="main">
     <ul>
     <div class="postx">
         <% posts.forEach((post, index)=> { %>
@@ -28,16 +31,17 @@
                 <p>
                     <%= post.content %>
                 </p>
-
+    
                 <a href="/edit/<%= index %>">Edit</a>
-
+    
                 <form action="/delete/<%= index %>" method="POST">
                     <button>Delete</button>
                 </form>
             </li>
             <% }) %>
-    </ul>
+        </ul>
     </div>
+</div>
 </body>
 
 </html>

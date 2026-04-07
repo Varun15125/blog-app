@@ -18,7 +18,7 @@ let posts = [
         username: 'reporter',
         title: 'PETROL PRICES',
         content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.'
-    }
+    },
 ];
 
 // Home - show all posts

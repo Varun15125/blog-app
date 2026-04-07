@@ -18,6 +18,22 @@ body>* {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.add {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    border-radius: 35px;
+}
+
+.main {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* Headings */
 h1 {
     color: #667eea;
