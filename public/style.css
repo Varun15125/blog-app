@@ -3,22 +3,51 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     margin: 0;
-    padding: 20px;
+    padding: 0;
     min-height: 100vh;
 }
 
 /* Container/Main Content */
-body>* {
+.content {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.add {
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 10px;
+}
+/* .add {
     width: 100px;
     height: 40px;
     display: flex;
@@ -26,7 +55,7 @@ body>* {
     padding: 10px;
     align-items: center;
     border-radius: 35px;
-}
+} */
 
 .main {
     margin-top: 30px;
@@ -171,6 +200,51 @@ li>form button {
 
 li>form button:hover {
     background-color: #c0392b;
+}
+
+
+
+
+/* Page background */
+body {
+    background: #f4f4f4;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-header {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Name */
+.profile-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Bio */
+.profile-header p {
+    color: #555;
+    font-size: 16px;
 }
 
 /* Responsive Design */

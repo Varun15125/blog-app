@@ -9,39 +9,46 @@
 <link rel="stylesheet" href="/style.css">
 
 <body>
-    <h1>Blog Posts</h1>
+    <nav class="navbar">
+        <div class="logo">My Blog</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/add">Add Post</a>
+            <a href="/profile">Profile</a>
+        </div>
+    </nav>
 
-<div class="add">
-    <a href="/add">New Post</a>
+    <div class="content">
+        <!-- <div class="add">
+            <a href="/add">New Post</a>
+        </div> -->
 
-</div>
-
+        <div class="main">
+            <ul>
+            <div class="postx">
+                <% posts.forEach((post, index)=> { %>
+                    <li>
+                        <h3>
+                            @<%= post.username %>
+                        </h3>
+                        <h4>
+                            <%= post.title %>
+                        </h4>
+                        <p>
+                            <%= post.content %>
+                        </p>
     
-<div class="main">
-    <ul>
-    <div class="postx">
-        <% posts.forEach((post, index)=> { %>
-            <li>
-                <h3>
-                    @<%= post.username %>
-                </h3>
-                <h4>
-                    <%= post.title %>
-                </h4>
-                <p>
-                    <%= post.content %>
-                </p>
+                        <a href="/edit/<%= index %>">Edit</a>
     
-                <a href="/edit/<%= index %>">Edit</a>
-    
-                <form action="/delete/<%= index %>" method="POST">
-                    <button>Delete</button>
-                </form>
-            </li>
-            <% }) %>
-        </ul>
+                        <form action="/delete/<%= index %>" method="POST">
+                            <button>Delete</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </div>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

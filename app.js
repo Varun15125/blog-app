@@ -19,14 +19,6 @@ let posts = [
         title: 'PETROL PRICES',
         content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.'
     },
-<<<<<<< HEAD
-=======
-     {
-        username: 'deliotte',
-        title: 'drive for 2026',
-        content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.'
-    }
->>>>>>> fb7bd1a5870f7070b757a35fb9d13c3b0bf25746
 ];
 
 // Home - show all posts
@@ -34,7 +26,16 @@ app.get('/', (req, res) => {
     res.render('index', { posts });
 });
 
-// Show add form
+app.get("/profile", (req, res) => {
+    const user = {
+        name: "Varun",
+        bio: "MERN Stack Developer",
+        avatar: "/images/default-avatar.png"
+    };
+
+    res.render("profile", { user });
+});
+
 app.get('/add', (req, res) => {
     res.render('add');
 });
