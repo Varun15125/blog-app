@@ -19,6 +19,12 @@ let posts = [
         title: 'PETROL PRICES',
         content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.'
     },
+
+    {
+        username: 'ai_expert',
+        title: 'Agentic AI Explained',
+        content: 'Agentic AI (or Agent-based AI) is a type of artificial intelligence that can act independently, make decisions, and complete tasks on its own—instead of just responding to user prompts.'
+    }
 ];
 
 // Home - show all posts
@@ -30,7 +36,16 @@ app.get("/profile", (req, res) => {
     const user = {
         name: "Varun",
         bio: "MERN Stack Developer",
-        avatar: "/images/default-avatar.png"
+        avatar: "/images/default-avatar.png",
+        location: "Bangalore, India",
+        website: "https://example.com",
+        websiteText: "example.com",
+        longBio: "I build user-first web applications using the MERN stack, with a strong focus on responsive UI, clean code, and fast performance.",
+        stats: {
+            posts: posts.length,
+            followers: 1860,
+            following: 245
+        }
     };
 
     res.render("profile", { user });

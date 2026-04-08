@@ -4,17 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= user?.name || 'Profile' %> | Profile</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <img src="<%= user?.avatar || '/images/default-avatar.png' %>" alt="<%= user?.name || 'User' %>" class="profile-avatar">
-    
-    <h1>
-        <%= user?.name || "Guest User" %>
-    </h1>
-    <p>
-        <%= user?.bio || "No bio available" %>
-    </p>
+    <div class="container profile-page">
+        <div class="profile-header">
+            <div class="profile-avatar-wrap">
+                <img src="<%= user?.avatar || '/images/default-avatar.png' %>" alt="<%= user?.name || 'User' %>" class="profile-avatar">
+            </div>
+
+            <div class="profile-info">
+                <h1><%= user?.name || 'Guest User' %></h1>
+                <p class="profile-role"><%= user?.bio || 'No bio available' %></p>
+
+                <div class="profile-meta">
+                    <div class="profile-meta-item">
+                        <span>Location</span>
+                        <strong><%= user?.location || 'Unknown' %></strong>
+                    </div>
+                    <div class="profile-meta-item">
+                        <span>Website</span>
+                        <strong><a href="<%= user?.website || '#' %>" target="_blank" rel="noreferrer"><%= user?.websiteText || user?.website || 'Not set' %></a></strong>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a class="btn btn-primary" href="/">Back to posts</a>
+                    <a class="btn btn-secondary" href="#">Message</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-metrics">
+            <div class="metric-card">
+                <strong><%= user?.stats?.posts || 0 %></strong>
+                <span>Posts</span>
+            </div>
+            <div class="metric-card">
+                <strong><%= user?.stats?.followers || 0 %></strong>
+                <span>Followers</span>
+            </div>
+            <div class="metric-card">
+                <strong><%= user?.stats?.following || 0 %></strong>
+                <span>Following</span>
+            </div>
+        </div>
+
+        <div class="profile-bio-card">
+            <h2>About</h2>
+            <p><%= user?.longBio || 'Passionate developer building modern web experiences with clean, user-friendly interfaces.' %></p>
+        </div>
+    </div>
 </body>
 </html>
