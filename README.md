@@ -16,7 +16,7 @@ Express.js
 EJS (Embedded JavaScript Templates)
 
 # Project Structure
-
+**
 blog-app/ 
 │
 ├── views/ 
@@ -29,7 +29,7 @@ blog-app/
 | 
 │ ├── app.js 
 └── package.json
-
+**
 # How It Works
 Data is stored in an in-memory array (temporary storage)
 Express handles routing
